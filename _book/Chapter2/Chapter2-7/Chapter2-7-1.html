@@ -1,0 +1,2428 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.7.1 Dart中的函数定义的几种方式 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Chapter2-7-2.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    第一章 初识移动Web前端
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    1.1 移动Web前端史
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../Chapter1/Chapter1-1/Chapter1-1-1.html">
+            
+                <a href="../../Chapter1/Chapter1-1/Chapter1-1-1.html">
+            
+                    
+                    1.1.1 Web开发的变迁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../Chapter1/Chapter1-1/Chapter1-1-2.html">
+            
+                <a href="../../Chapter1/Chapter1-1/Chapter1-1-2.html">
+            
+                    
+                    1.1.2 移动Web与HTML5不得不说的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../Chapter1/Chapter1-1/Chapter1-1-3.html">
+            
+                <a href="../../Chapter1/Chapter1-1/Chapter1-1-3.html">
+            
+                    
+                    1.1.3 移动Web与原生应用的优劣势
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    1.2 移动Web前端现状与未来
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../Chapter1/Chapter1-2/Chapter1-2-1.html">
+            
+                <a href="../../Chapter1/Chapter1-2/Chapter1-2-1.html">
+            
+                    
+                    1.2.1 移动Web的现状
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../Chapter1/Chapter1-2/Chapter1-2-2.html">
+            
+                <a href="../../Chapter1/Chapter1-2/Chapter1-2-2.html">
+            
+                    
+                    1.2.2 您需要掌握的知识体系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../Chapter1/Chapter1-2/Chapter1-2-3.html">
+            
+                <a href="../../Chapter1/Chapter1-2/Chapter1-2-3.html">
+            
+                    
+                    1.2.3 技术拐点与未来趋势
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" >
+            
+                <span>
+            
+                    
+                    1.3 常见问题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../../Chapter1/Chapter1-3/Chapter1-3-1.html">
+            
+                <a href="../../Chapter1/Chapter1-3/Chapter1-3-1.html">
+            
+                    
+                    1.3.1 移动Web前端开发有前景吗
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../../Chapter1/Chapter1-3/Chapter1-3-2.html">
+            
+                <a href="../../Chapter1/Chapter1-3/Chapter1-3-2.html">
+            
+                    
+                    1.3.2 PC Web和移动Web开发区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    第二章 Dart语言
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    2.1 Dart 介绍、环境搭建与开发工具配置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../Chapter2-1/Chapter2-1-1.html">
+            
+                <a href="../Chapter2-1/Chapter2-1-1.html">
+            
+                    
+                    2.1.1 Dart介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../Chapter2-1/Chapter2-1-2.html">
+            
+                <a href="../Chapter2-1/Chapter2-1-2.html">
+            
+                    
+                    2.1.2 环境搭建
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../Chapter2-1/Chapter2-1-3.html">
+            
+                <a href="../Chapter2-1/Chapter2-1-3.html">
+            
+                    
+                    2.1.3 开发工具配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    2.2 Dart 入门基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../Chapter2-2/Chapter2-2-1.html">
+            
+                <a href="../Chapter2-2/Chapter2-2-1.html">
+            
+                    
+                    2.2.1 Dart入口方法介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../Chapter2-2/Chapter2-2-2.html">
+            
+                <a href="../Chapter2-2/Chapter2-2-2.html">
+            
+                    
+                    2.2.2 Dart注释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../Chapter2-2/Chapter2-2-3.html">
+            
+                <a href="../Chapter2-2/Chapter2-2-3.html">
+            
+                    
+                    2.2.3 Dart变量和常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" data-path="../Chapter2-2/Chapter2-2-4.html">
+            
+                <a href="../Chapter2-2/Chapter2-2-4.html">
+            
+                    
+                    2.2.4 Dart的关键字和命名规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    2.3 Dart 的数据类型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../Chapter2-3/Chapter2-3-1.html">
+            
+                <a href="../Chapter2-3/Chapter2-3-1.html">
+            
+                    
+                    2.3.1 Numbers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../Chapter2-3/Chapter2-3-2.html">
+            
+                <a href="../Chapter2-3/Chapter2-3-2.html">
+            
+                    
+                    2.3.2 Strings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../Chapter2-3/Chapter2-3-3.html">
+            
+                <a href="../Chapter2-3/Chapter2-3-3.html">
+            
+                    
+                    2.3.3 Booleans
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../Chapter2-3/Chapter2-3-4.html">
+            
+                <a href="../Chapter2-3/Chapter2-3-4.html">
+            
+                    
+                    2.3.4 Lists
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="../Chapter2-3/Chapter2-3-5.html">
+            
+                <a href="../Chapter2-3/Chapter2-3-5.html">
+            
+                    
+                    2.3.5 Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.6" data-path="../Chapter2-3/Chapter2-3-6.html">
+            
+                <a href="../Chapter2-3/Chapter2-3-6.html">
+            
+                    
+                    2.3.6 Sets
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.7" data-path="../Chapter2-3/Chapter2-3-7.html">
+            
+                <a href="../Chapter2-3/Chapter2-3-7.html">
+            
+                    
+                    2.3.7 Runes 与 grapheme clusters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.8" data-path="../Chapter2-3/Chapter2-3-8.html">
+            
+                <a href="../Chapter2-3/Chapter2-3-8.html">
+            
+                    
+                    2.3.8 Symbols
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    2.4 Dart 运算符、条件表达式和类型转换
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../Chapter2-4/Chapter2-4-1.html">
+            
+                <a href="../Chapter2-4/Chapter2-4-1.html">
+            
+                    
+                    2.4.1 Dart算术运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../Chapter2-4/Chapter2-4-2.html">
+            
+                <a href="../Chapter2-4/Chapter2-4-2.html">
+            
+                    
+                    2.4.2 Dart关系运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../Chapter2-4/Chapter2-4-3.html">
+            
+                <a href="../Chapter2-4/Chapter2-4-3.html">
+            
+                    
+                    2.4.3 Dart逻辑运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../Chapter2-4/Chapter2-4-4.html">
+            
+                <a href="../Chapter2-4/Chapter2-4-4.html">
+            
+                    
+                    2.4.4 Dart赋值运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../Chapter2-4/Chapter2-4-5.html">
+            
+                <a href="../Chapter2-4/Chapter2-4-5.html">
+            
+                    
+                    2.4.5 Dart条件表达式 if...else 和 switch...case
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../Chapter2-4/Chapter2-4-6.html">
+            
+                <a href="../Chapter2-4/Chapter2-4-6.html">
+            
+                    
+                    2.4.6 Dart类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    2.5 Dart 循环语句
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../Chapter2-5/Chapter2-5-1.html">
+            
+                <a href="../Chapter2-5/Chapter2-5-1.html">
+            
+                    
+                    2.5.1 for基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../Chapter2-5/Chapter2-5-2.html">
+            
+                <a href="../Chapter2-5/Chapter2-5-2.html">
+            
+                    
+                    2.5.2 for遍历集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../Chapter2-5/Chapter2-5-3.html">
+            
+                <a href="../Chapter2-5/Chapter2-5-3.html">
+            
+                    
+                    2.5.3 for嵌套循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../Chapter2-5/Chapter2-5-4.html">
+            
+                <a href="../Chapter2-5/Chapter2-5-4.html">
+            
+                    
+                    2.5.4 while和do...while
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../Chapter2-5/Chapter2-5-5.html">
+            
+                <a href="../Chapter2-5/Chapter2-5-5.html">
+            
+                    
+                    2.5.5 break和continue用法区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" >
+            
+                <span>
+            
+                    
+                    2.6 Dart 集合类型List、 Set 和 Map 详解以及循环语句 forEach map where any every
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.6.1" data-path="../Chapter2-6/Chapter2-6-1.html">
+            
+                <a href="../Chapter2-6/Chapter2-6-1.html">
+            
+                    
+                    2.6.1 List详解、List里面常用的属性和方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.2" data-path="../Chapter2-6/Chapter2-6-2.html">
+            
+                <a href="../Chapter2-6/Chapter2-6-2.html">
+            
+                    
+                    2.6.2 Set定义集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.3" data-path="../Chapter2-6/Chapter2-6-3.html">
+            
+                <a href="../Chapter2-6/Chapter2-6-3.html">
+            
+                    
+                    2.6.3 Map详解、Map里面常用属性和方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.4" data-path="../Chapter2-6/Chapter2-6-4.html">
+            
+                <a href="../Chapter2-6/Chapter2-6-4.html">
+            
+                    
+                    2.6.4 其他类型转换成List类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.5" data-path="../Chapter2-6/Chapter2-6-5.html">
+            
+                <a href="../Chapter2-6/Chapter2-6-5.html">
+            
+                    
+                    2.6.5 forEach map where any every 详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" >
+            
+                <span>
+            
+                    
+                    2.7 Dart 中的函数
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.7.1" data-path="Chapter2-7-1.html">
+            
+                <a href="Chapter2-7-1.html">
+            
+                    
+                    2.7.1 Dart中的函数定义的几种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.2" data-path="Chapter2-7-2.html">
+            
+                <a href="Chapter2-7-2.html">
+            
+                    
+                    2.7.2 可选参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.3" data-path="Chapter2-7-3.html">
+            
+                <a href="Chapter2-7-3.html">
+            
+                    
+                    2.7.3 默认参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.4" data-path="Chapter2-7-4.html">
+            
+                <a href="Chapter2-7-4.html">
+            
+                    
+                    2.7.4 命名参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.5" data-path="Chapter2-7-5.html">
+            
+                <a href="Chapter2-7-5.html">
+            
+                    
+                    2.7.5 方法当做参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.6" data-path="Chapter2-7-6.html">
+            
+                <a href="Chapter2-7-6.html">
+            
+                    
+                    2.7.6 箭头函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.7" data-path="Chapter2-7-7.html">
+            
+                <a href="Chapter2-7-7.html">
+            
+                    
+                    2.7.7 函数相互调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.8" data-path="Chapter2-7-8.html">
+            
+                <a href="Chapter2-7-8.html">
+            
+                    
+                    2.7.8 匿名函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.9" data-path="Chapter2-7-9.html">
+            
+                <a href="Chapter2-7-9.html">
+            
+                    
+                    2.7.9 递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7.10" data-path="../Chapter2-8/Chapter2-8-1.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-1.html">
+            
+                    
+                    2.7.10 闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" >
+            
+                <span>
+            
+                    
+                    2.8 Dart 中的类
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.8.1" data-path="../Chapter2-8/Chapter2-8-1.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-1.html">
+            
+                    
+                    2.8.1 Dart面向对象的介绍以及Data内置对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.2" data-path="../Chapter2-8/Chapter2-8-2.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-2.html">
+            
+                    
+                    2.8.2 Dart中创建义类使用类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.3" data-path="../Chapter2-8/Chapter2-8-3.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-3.html">
+            
+                    
+                    2.8.3 Dart中自定义类的默认构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.4" data-path="../Chapter2-8/Chapter2-8-4.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-4.html">
+            
+                    
+                    2.8.4 Dart中自定义类的命名构造函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.5" data-path="../Chapter2-8/Chapter2-8-5.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-5.html">
+            
+                    
+                    2.8.5 Dart中把类单独抽离成一个模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.6" data-path="../Chapter2-8/Chapter2-8-6.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-6.html">
+            
+                    
+                    2.8.6 Dart中的私有方法和私有属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.7" data-path="../Chapter2-8/Chapter2-8-7.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-7.html">
+            
+                    
+                    2.8.7 Dart类中的getter和setter修饰符的用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.8" data-path="../Chapter2-8/Chapter2-8-8.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-8.html">
+            
+                    
+                    2.8.8 Dart类中的初始化列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.9" data-path="../Chapter2-8/Chapter2-8-9.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-9.html">
+            
+                    
+                    2.8.9 Dart类中的静态成员和静态方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.10" data-path="../Chapter2-8/Chapter2-8-10.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-10.html">
+            
+                    
+                    2.8.10 Dart中的对象操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.11" data-path="../Chapter2-8/Chapter2-8-11.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-11.html">
+            
+                    
+                    2.8.11 Dart类的继承-简单继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.12" data-path="../Chapter2-8/Chapter2-8-12.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-12.html">
+            
+                    
+                    2.8.12 Dart类的继承-super关键词的使用（实例化子类给父类构造函数传参）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.13" data-path="../Chapter2-8/Chapter2-8-13.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-13.html">
+            
+                    
+                    2.8.13 Dart类的继承-实例化子类给命名构造函数传参
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.14" data-path="../Chapter2-8/Chapter2-8-14.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-14.html">
+            
+                    
+                    2.8.14 Dart类的继承-覆写父类方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8.15" data-path="../Chapter2-8/Chapter2-8-15.html">
+            
+                <a href="../Chapter2-8/Chapter2-8-15.html">
+            
+                    
+                    2.8.15 Dart子类里面调用父类的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" >
+            
+                <span>
+            
+                    
+                    2.9 Dart中的抽象类、多态以及接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.9.1" data-path="../Chapter2-9/Chapter2-9-1.html">
+            
+                <a href="../Chapter2-9/Chapter2-9-1.html">
+            
+                    
+                    2.9.1 Dart中的抽象类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.2" data-path="../Chapter2-9/Chapter2-9-2.html">
+            
+                <a href="../Chapter2-9/Chapter2-9-2.html">
+            
+                    
+                    2.9.2 Dart中多态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.3" data-path="../Chapter2-9/Chapter2-9-3.html">
+            
+                <a href="../Chapter2-9/Chapter2-9-3.html">
+            
+                    
+                    2.9.3 接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9.4" data-path="../Chapter2-9/Chapter2-9-4.html">
+            
+                <a href="../Chapter2-9/Chapter2-9-4.html">
+            
+                    
+                    2.9.4 接口文件分离
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" >
+            
+                <span>
+            
+                    
+                    2.10 Dart中一个类实现多个接口以及Dart中Mixins
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.10.1" data-path="../Chapter2-10/Chapter2-10-1.html">
+            
+                <a href="../Chapter2-10/Chapter2-10-1.html">
+            
+                    
+                    2.10.1 Dart中implements实现多个接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.2" data-path="../Chapter2-10/Chapter2-10-2.html">
+            
+                <a href="../Chapter2-10/Chapter2-10-2.html">
+            
+                    
+                    2.10.2 Dart中的mixins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10.3" data-path="../Chapter2-10/Chapter2-10-3.html">
+            
+                <a href="../Chapter2-10/Chapter2-10-3.html">
+            
+                    
+                    2.10.3 Dart中的mixins的类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" >
+            
+                <span>
+            
+                    
+                    2.11 Dart中的泛型
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.11.1" data-path="../Chapter2-11/Chapter2-11-1.html">
+            
+                <a href="../Chapter2-11/Chapter2-11-1.html">
+            
+                    
+                    2.11.1 Dart中的泛型-泛型方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.2" data-path="../Chapter2-11/Chapter2-11-2.html">
+            
+                <a href="../Chapter2-11/Chapter2-11-2.html">
+            
+                    
+                    2.11.2 Dart中的泛型-泛型类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11.3" data-path="../Chapter2-11/Chapter2-11-3.html">
+            
+                <a href="../Chapter2-11/Chapter2-11-3.html">
+            
+                    
+                    2.11.3 Dart中的泛型-泛型接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../Chapter3/">
+            
+                <a href="../../Chapter3/">
+            
+                    
+                    第三章 Flutter框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../Chapter3/Chapter3-1.html">
+            
+                <a href="../../Chapter3/Chapter3-1.html">
+            
+                    
+                    3.1 Flutter 介绍 - Flutter Windows Android环境搭建 真机调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../Chapter3/Chapter3-2.html">
+            
+                <a href="../../Chapter3/Chapter3-2.html">
+            
+                    
+                    3.2 Flutter Android 真机器调试 、虚拟机调试以及在Vscode中开发Flutter应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../Chapter3/Chapter3-3.html">
+            
+                <a href="../../Chapter3/Chapter3-3.html">
+            
+                    
+                    3.3 Mac 电脑搭建Flutter Ios环境以及让Flutter运行在ios设备上
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../Chapter3/Chapter3-4.html">
+            
+                <a href="../../Chapter3/Chapter3-4.html">
+            
+                    
+                    3.4 Flutter 目录结构介绍、入口、自定义Widget、Center组件、Text组件、MaterialApp组件、Scaffold组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../Chapter3/Chapter3-5.html">
+            
+                <a href="../../Chapter3/Chapter3-5.html">
+            
+                    
+                    3.5 Flutter Container组件、Text组件详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../Chapter3/Chapter3-6.html">
+            
+                <a href="../../Chapter3/Chapter3-6.html">
+            
+                    
+                    3.6 Flutter 图片组件Image 、本地图片、远程图片、图片剪切
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../Chapter3/Chapter3-7.html">
+            
+                <a href="../../Chapter3/Chapter3-7.html">
+            
+                    
+                    3.7 Flutter ListView基础列表组件、水平列表组件、图标组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../Chapter3/Chapter3-8.html">
+            
+                <a href="../../Chapter3/Chapter3-8.html">
+            
+                    
+                    3.8 Flutter ListView动态列表组件以及循环动态数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../../Chapter3/Chapter3-9.html">
+            
+                <a href="../../Chapter3/Chapter3-9.html">
+            
+                    
+                    3.9 Flutter GridView组件以及动态GridView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../../Chapter3/Chapter3-10.html">
+            
+                <a href="../../Chapter3/Chapter3-10.html">
+            
+                    
+                    3.10 Flutter 页面布局 Paddiing Row Column Expanded组件详解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../../Chapter3/Chapter3-11.html">
+            
+                <a href="../../Chapter3/Chapter3-11.html">
+            
+                    
+                    3.11 Flutter 页面布局 Stack层叠组件 Stack与Align  Stack与Positioned实现定位布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../../Chapter3/Chapter3-12.html">
+            
+                <a href="../../Chapter3/Chapter3-12.html">
+            
+                    
+                    3.12 Flutter 页面布局 Flutter AspectRatio、Card卡片组件、卡片图文列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../../Chapter3/Chapter3-13.html">
+            
+                <a href="../../Chapter3/Chapter3-13.html">
+            
+                    
+                    3.13 Flutter 页面布局 Wrap组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../../Chapter3/Chapter3-14.html">
+            
+                <a href="../../Chapter3/Chapter3-14.html">
+            
+                    
+                    3.14 Flutter StatefulWidget有状态组件 、页面上绑定数据、改变页面数据 、实现计数器功能 动态列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../../Chapter3/Chapter3-15.html">
+            
+                <a href="../../Chapter3/Chapter3-15.html">
+            
+                    
+                    3.15 Flutter BottomNavigationBar 自定义底部导航条、以及实现页面切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../../Chapter3/Chapter3-16.html">
+            
+                <a href="../../Chapter3/Chapter3-16.html">
+            
+                    
+                    3.16 Flutter 中的普通路由、普通路由传值、命名路由、命名路由传值（上）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../../Chapter3/Chapter3-17.html">
+            
+                <a href="../../Chapter3/Chapter3-17.html">
+            
+                    
+                    3.17 Flutter 中的普通路由、普通路由传值、命名路由、命名路由传值 无状态组件传值 有状态组件传值（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../../Chapter3/Chapter3-18.html">
+            
+                <a href="../../Chapter3/Chapter3-18.html">
+            
+                    
+                    3.18 Flutter 中的路由 pushReplacementNamed路由替换、pushNamedAndRemoveUntil返回到根路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="../../Chapter3/Chapter3-19.html">
+            
+                <a href="../../Chapter3/Chapter3-19.html">
+            
+                    
+                    3.19 Flutter 自定义AppBar 定义顶部Tab切换  底部Tab结合顶部Tab实现类似头条页面布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="../../Chapter3/Chapter3-20.html">
+            
+                <a href="../../Chapter3/Chapter3-20.html">
+            
+                    
+                    3.20 Flutter 中通过TabController定义顶部tab切换 介绍生命周期函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="../../Chapter3/Chapter3-21.html">
+            
+                <a href="../../Chapter3/Chapter3-21.html">
+            
+                    
+                    3.21 Flutter Drawer侧边栏、DrawerHeader、 UserAccountsDrawerHeader 以及侧边栏内容布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="../../Chapter3/Chapter3-22.html">
+            
+                <a href="../../Chapter3/Chapter3-22.html">
+            
+                    
+                    3.22 Flutter 中的按钮组件 RaisedButton、FlatButton、OutlineButton、IconButton、ButtonBar以及自定义按钮组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="../../Chapter3/Chapter3-23.html">
+            
+                <a href="../../Chapter3/Chapter3-23.html">
+            
+                    
+                    3.23 Flutter FloatingActionButton实现类似闲鱼App底部导航凸起按钮
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="../../Chapter3/Chapter3-24.html">
+            
+                <a href="../../Chapter3/Chapter3-24.html">
+            
+                    
+                    3.24 Flutter 中的表单 TextField单行文本框 多行文本框 CheckBox CheckboxListTile （上）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="../../Chapter3/Chapter3-25.html">
+            
+                <a href="../../Chapter3/Chapter3-25.html">
+            
+                    
+                    3.25 Flutter 中的表单 Radio Switch RadioListTile SwitchListTile以及表单组件实现一个简单的学员登记系统（下）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.26" data-path="../../Chapter3/Chapter3-26.html">
+            
+                <a href="../../Chapter3/Chapter3-26.html">
+            
+                    
+                    3.26 Flutter 日期和时间戳、格式化日期库、Future异步等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="../../Chapter3/Chapter3-27.html">
+            
+                <a href="../../Chapter3/Chapter3-27.html">
+            
+                    
+                    3.27 Flutter 日期 时间组件flutter_cupertino_date_picker的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="../../Chapter3/Chapter3-28.html">
+            
+                <a href="../../Chapter3/Chapter3-28.html">
+            
+                    
+                    3.28 Flutter 轮播图 flutter_swiper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="../../Chapter3/Chapter3-29.html">
+            
+                <a href="../../Chapter3/Chapter3-29.html">
+            
+                    
+                    3.29 Flutter Dialog  AlertDialog 、SimpleDialog、showModalBottomSheet、showToast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="../../Chapter3/Chapter3-30.html">
+            
+                <a href="../../Chapter3/Chapter3-30.html">
+            
+                    
+                    3.30 Flutter 自定义Dialog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.31" data-path="../../Chapter3/Chapter3-31.html">
+            
+                <a href="../../Chapter3/Chapter3-31.html">
+            
+                    
+                    3.31 Flutter http get请求数据、post提交数据、以及渲染动态数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.32" data-path="../../Chapter3/Chapter3-32.html">
+            
+                <a href="../../Chapter3/Chapter3-32.html">
+            
+                    
+                    3.32 Flutter Dio库实现网络请求以及动态渲染数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.33" data-path="../../Chapter3/Chapter3-33.html">
+            
+                <a href="../../Chapter3/Chapter3-33.html">
+            
+                    
+                    3.33 Flutter 下拉刷新 上拉分页加载更多
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.34" data-path="../../Chapter3/Chapter3-34.html">
+            
+                <a href="../../Chapter3/Chapter3-34.html">
+            
+                    
+                    3.34 Flutter 实现简单的新闻系统渲染新闻详情数据以及用flutter_html解析html
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.35" data-path="../../Chapter3/Chapter3-35.html">
+            
+                <a href="../../Chapter3/Chapter3-35.html">
+            
+                    
+                    3.35 Flutter Native - 使用 Flutter WebView组件flutter_inappbrowser加载远程web页面渲染新闻详情数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.36" data-path="../../Chapter3/Chapter3-36.html">
+            
+                <a href="../../Chapter3/Chapter3-36.html">
+            
+                    
+                    3.36 Flutter Native - Flutter 中获取设备信息以及使用高德Api获取地理位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.37" data-path="../../Chapter3/Chapter3-37.html">
+            
+                <a href="../../Chapter3/Chapter3-37.html">
+            
+                    
+                    3.37 Flutter Native - Flutter 调用原生硬件Api实现照相机拍照和相册选择以及拍照上传到服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.38" data-path="../../Chapter3/Chapter3-38.html">
+            
+                <a href="../../Chapter3/Chapter3-38.html">
+            
+                    
+                    3.38 Flutter Native - Flutter 实现视频播放
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.39" data-path="../../Chapter3/Chapter3-39.html">
+            
+                <a href="../../Chapter3/Chapter3-39.html">
+            
+                    
+                    3.39 Flutter Native - Flutter 检测网络连接 监听网络变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.40" data-path="../../Chapter3/Chapter3-40.html">
+            
+                <a href="../../Chapter3/Chapter3-40.html">
+            
+                    
+                    3.40 Flutter Native - Flutter 本地存储、封装本地存储类 - 实现最简单的状态管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.41" data-path="../../Chapter3/Chapter3-41.html">
+            
+                <a href="../../Chapter3/Chapter3-41.html">
+            
+                    
+                    3.41 Flutter Native - Flutter 调用原生硬件Api实现扫码  扫描条形码 扫描二维码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.42" data-path="../../Chapter3/Chapter3-42.html">
+            
+                <a href="../../Chapter3/Chapter3-42.html">
+            
+                    
+                    3.42 Flutter Native - 检测应用版本号、服务器下载文件以及实现App自动升级、安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.43" data-path="../../Chapter3/Chapter3-43.html">
+            
+                <a href="../../Chapter3/Chapter3-43.html">
+            
+                    
+                    3.43 Flutter Native - Flutter 打开外部浏览器 打开外部应用 拨打电话 发送短信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.44" >
+            
+                <span>
+            
+                    
+                    [3.44 Flutter Native - 支付宝支付]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.44.1" data-path="../../Chapter3/Chapter3-44-1.html">
+            
+                <a href="../../Chapter3/Chapter3-44-1.html">
+            
+                    
+                    3.44.1 android 、ios支付宝支付准备工作 创建应用、生成签名、提交审核应用(1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.44.2" data-path="../../Chapter3/Chapter3-44-2.html">
+            
+                <a href="../../Chapter3/Chapter3-44-2.html">
+            
+                    
+                    3.44.2 Flutter 支付宝支付流程以及Flutter Android中执行支付宝支付(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.44.3" data-path="../../Chapter3/Chapter3-44-3.html">
+            
+                <a href="../../Chapter3/Chapter3-44-3.html">
+            
+                    
+                    3.44.3 Flutter Ios中实现支付宝支付(3)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.45" >
+            
+                <span>
+            
+                    
+                    [3.45 Flutter Native - 微信支付]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.45.1" data-path="../../Chapter3/Chapter3-45-1.html">
+            
+                <a href="../../Chapter3/Chapter3-45-1.html">
+            
+                    
+                    3.45.1 微信支付 注册开放平台、申请开发者、创建应用、 申请微信支付 、生成商户平台账户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.45.2" data-path="../../Chapter3/Chapter3-45-2.html">
+            
+                <a href="../../Chapter3/Chapter3-45-2.html">
+            
+                    
+                    3.45.2 微信支付android获取应用包名称、修改应用包名称、获取Android应用签名、设置ios包名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.45.3" data-path="../../Chapter3/Chapter3-45-3.html">
+            
+                <a href="../../Chapter3/Chapter3-45-3.html">
+            
+                    
+                    3.45.3 微信app支付流程 、Flutter在Ios中实现微信支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.45.4" data-path="../../Chapter3/Chapter3-45-4.html">
+            
+                <a href="../../Chapter3/Chapter3-45-4.html">
+            
+                    
+                    3.45.4 Flutter在Android中实现微信支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    [第四章 项目实战]
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../Chapter4/Chapter4-1.html">
+            
+                <a href="../../Chapter4/Chapter4-1.html">
+            
+                    
+                    4.1 Nodejs+SocketIo - 原生nodejs结合Socket.io 实现服务器和客户端的相互通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../Chapter4/Chapter4-2.html">
+            
+                <a href="../../Chapter4/Chapter4-2.html">
+            
+                    
+                    4.2 Nodejs+SocketIo - express结合Socket.io 实现服务器和客户端的相互通信、群聊 、机器人原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../Chapter4/Chapter4-3.html">
+            
+                <a href="../../Chapter4/Chapter4-3.html">
+            
+                    
+                    4.3 Nodejs+SocketIo - express结合Socket.io 跨域实现聊天以及Socket.io结合数据库实现智能机器人
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../Chapter4/Chapter4-4.html">
+            
+                <a href="../../Chapter4/Chapter4-4.html">
+            
+                    
+                    4.4 Nodejs+SocketIo - express Socket.io 实现聊天室
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../Chapter4/Chapter4-5.html">
+            
+                <a href="../../Chapter4/Chapter4-5.html">
+            
+                    
+                    4.5 Nodejs+SocketIo - Express+Socket.io 多房间聊天以及同一桌点餐用户之间同步信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../Chapter4/Chapter4-6.html">
+            
+                <a href="../../Chapter4/Chapter4-6.html">
+            
+                    
+                    4.6 Nodejs+SocketIo - Koa中Socket.io的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../Chapter4/Chapter4-7.html">
+            
+                <a href="../../Chapter4/Chapter4-7.html">
+            
+                    
+                    4.7 socket.Io - Flutter 中使用socket.io实现即时通讯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../Chapter4/Chapter4-8.html">
+            
+                <a href="../../Chapter4/Chapter4-8.html">
+            
+                    
+                    4.8 socket.Io - Flutter 中实现类似汽车之家聊天室可发送图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../Chapter4/Chapter4-9.html">
+            
+                <a href="../../Chapter4/Chapter4-9.html">
+            
+                    
+                    4.9 Flutter直播必看基础 - 在线直播系统介绍、直播流程介绍、直播协议介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../Chapter4/Chapter4-10.html">
+            
+                <a href="../../Chapter4/Chapter4-10.html">
+            
+                    
+                    4.10 Flutter直播必看基础 - 推流、拉流、借助腾讯云直播实现在线直播
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../../Chapter4/Chapter4-11.html">
+            
+                <a href="../../Chapter4/Chapter4-11.html">
+            
+                    
+                    4.11 Flutter直播必看基础 - 推流、拉流、通过Nodejs搭建自己的流媒体服务器实现直播-单核 多核
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../../Chapter4/Chapter4-12.html">
+            
+                <a href="../../Chapter4/Chapter4-12.html">
+            
+                    
+                    4.12 Flutter直播 - 在Flutter中实现拉流直播
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../../Chapter4/Chapter4-13.html">
+            
+                <a href="../../Chapter4/Chapter4-13.html">
+            
+                    
+                    4.13 Flutter指纹识别 - Flutter App中 生物识别认证 指纹认证 人脸认证 （android ios）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../../Chapter4/Chapter4-14.html">
+            
+                <a href="../../Chapter4/Chapter4-14.html">
+            
+                    
+                    4.14 极光推送 - Flutter 在Android中实现消息推送、设置别名 指定设备推送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../../Chapter4/Chapter4-15.html">
+            
+                <a href="../../Chapter4/Chapter4-15.html">
+            
+                    
+                    4.15 极光推送 - Flutter在Ios中实现消息推送、附加字段、设置别名 指定设备推送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../../Chapter4/Chapter4-16.html">
+            
+                <a href="../../Chapter4/Chapter4-16.html">
+            
+                    
+                    4.16 国际化 - Flutter中长按表单 复制 黏贴改为中文、以及升级Flutter Sdk
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >2.7.1 Dart中的函数定义的几种方式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="271-dart&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x7684;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;">2.7.1 Dart&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x5B9A;&#x4E49;&#x7684;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;</h1>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="Chapter2-7-2.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 2.7.2 可选参数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.7.1 Dart中的函数定义的几种方式","level":"1.3.7.1","depth":3,"next":{"title":"2.7.2 可选参数","level":"1.3.7.2","depth":3,"path":"Chapter2/Chapter2-7/Chapter2-7-2.md","ref":"Chapter2/Chapter2-7/Chapter2-7-2.md","articles":[]},"previous":{"title":"2.7 Dart 中的函数","level":"1.3.7","depth":2,"ref":"","articles":[{"title":"2.7.1 Dart中的函数定义的几种方式","level":"1.3.7.1","depth":3,"path":"Chapter2/Chapter2-7/Chapter2-7-1.md","ref":"Chapter2/Chapter2-7/Chapter2-7-1.md","articles":[]},{"title":"2.7.2 可选参数","level":"1.3.7.2","depth":3,"path":"Chapter2/Chapter2-7/Chapter2-7-2.md","ref":"Chapter2/Chapter2-7/Chapter2-7-2.md","articles":[]},{"title":"2.7.3 默认参数","level":"1.3.7.3","depth":3,"path":"Chapter2/Chapter2-7/Chapter2-7-3.md","ref":"Chapter2/Chapter2-7/Chapter2-7-3.md","articles":[]},{"title":"2.7.4 命名参数","level":"1.3.7.4","depth":3,"path":"Chapter2/Chapter2-7/Chapter2-7-4.md","ref":"Chapter2/Chapter2-7/Chapter2-7-4.md","articles":[]},{"title":"2.7.5 方法当做参数","level":"1.3.7.5","depth":3,"path":"Chapter2/Chapter2-7/Chapter2-7-5.md","ref":"Chapter2/Chapter2-7/Chapter2-7-5.md","articles":[]},{"title":"2.7.6 箭头函数","level":"1.3.7.6","depth":3,"path":"Chapter2/Chapter2-7/Chapter2-7-6.md","ref":"Chapter2/Chapter2-7/Chapter2-7-6.md","articles":[]},{"title":"2.7.7 函数相互调用","level":"1.3.7.7","depth":3,"path":"Chapter2/Chapter2-7/Chapter2-7-7.md","ref":"Chapter2/Chapter2-7/Chapter2-7-7.md","articles":[]},{"title":"2.7.8 匿名函数","level":"1.3.7.8","depth":3,"path":"Chapter2/Chapter2-7/Chapter2-7-8.md","ref":"Chapter2/Chapter2-7/Chapter2-7-8.md","articles":[]},{"title":"2.7.9 递归","level":"1.3.7.9","depth":3,"path":"Chapter2/Chapter2-7/Chapter2-7-9.md","ref":"Chapter2/Chapter2-7/Chapter2-7-9.md","articles":[]},{"title":"2.7.10 闭包","level":"1.3.7.10","depth":3,"path":"Chapter2/Chapter2-8/Chapter2-8-1.md","ref":"Chapter2/Chapter2-8/Chapter2-8-1.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Chapter2/Chapter2-7/Chapter2-7-1.md","mtime":"2020-09-30T01:28:38.266Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-10-08T11:49:15.663Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
