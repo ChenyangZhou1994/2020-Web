@@ -120,4 +120,4 @@
 
   2015 年，微软在 Windows 10 中内置了 Microsoft Edge 浏览器。
 
-  2020年1月，微软正式推出采用 Chromium 内核的 Microsoft Edge。
+  2020 年 1 月，微软正式推出采用 Chromium 内核的 Microsoft Edge。
