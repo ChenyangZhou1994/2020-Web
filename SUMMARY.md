@@ -85,6 +85,16 @@
         * [2.11.1 Dart中的泛型-泛型方法](Chapter2/Chapter2-11/Chapter2-11-1.md)
         * [2.11.2 Dart中的泛型-泛型类](Chapter2/Chapter2-11/Chapter2-11-2.md)
         * [2.11.3 Dart中的泛型-泛型接口](Chapter2/Chapter2-11/Chapter2-11-3.md)
+    * 2.12 Dart中的库 自定义库、系统库、第三方库
+        * [2.12.1 Dart中的库](Chapter2/Chapter2-12/Chapter2-12-1.md)
+        * [2.12.2 Dart中导入自己本地库](Chapter2/Chapter2-12/Chapter2-12-2.md)
+        * [2.12.3 导入系统内置库 math库](Chapter2/Chapter2-12/Chapter2-12-3.md)
+        * [2.12.4 导入系统内置库实现请求数据httpClient](Chapter2/Chapter2-12/Chapter2-12-4.md)
+        * [2.12.5 关于 Async Await](Chapter2/Chapter2-12/Chapter2-12-5.md)
+        * [2.12.6 Dart 导入Pub包管理系统中的库](Chapter2/Chapter2-12/Chapter2-12-6.md)
+        * [2.12.7 Dart库的重命名 Dart冲突解决](Chapter2/Chapter2-12/Chapter2-12-7.md)
+        * [2.12.8 部分导入](Chapter2/Chapter2-12/Chapter2-12-8.md)
+        * [2.12.9 延迟加载](Chapter2/Chapter2-12/Chapter2-12-9.md)
 * [第三章 Flutter框架](Chapter3/README.md)
     * [3.1 Flutter 介绍 - Flutter Windows Android环境搭建 真机调试](Chapter3/Chapter3-1.md)
     * [3.2 Flutter Android 真机器调试 、虚拟机调试以及在Vscode中开发Flutter应用](Chapter3/Chapter3-2.md)
@@ -155,4 +165,3 @@
     * [4.14 极光推送 - Flutter 在Android中实现消息推送、设置别名 指定设备推送](Chapter4/Chapter4-14.md)
     * [4.15 极光推送 - Flutter在Ios中实现消息推送、附加字段、设置别名 指定设备推送](Chapter4/Chapter4-15.md)
     * [4.16 国际化 - Flutter中长按表单 复制 黏贴改为中文、以及升级Flutter Sdk](Chapter4/Chapter4-16.md)
-
